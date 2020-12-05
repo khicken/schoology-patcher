@@ -1,18 +1,13 @@
 {
 	"manifest_version": 2,
-
 	"name": "Schoology Patcher",
 	"description": "Simple opera extension to remove the stupid, stupid, annoying 'overdue' list from page",
 	"version": "1.0.1",
-	"background": {
-		"scripts": ["main.js"]
-	},
     "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>"],
     "content_scripts": [
         {
           "matches": ["https://fuhsd.schoology.com/*"],
-          "css": ["background.css"],
-          "js": ["background.js"]
+          "js": ["main.js"]
         }
     ],
 	"browser_action": {
